@@ -1,0 +1,207 @@
+#welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    overflow: hidden;
+}
+#welcome::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    content: "";
+    opacity: 0.2;
+    z-index: -12;
+}
+
+.cta {
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px crimson solid;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-top: 36px;
+    transition: 0.3 ease;
+    transition-property: background-color, color;
+    width: 200px;
+    text-align: center;
+}
+
+.cta:hover {
+    color: white;
+    background-color: crimson;
+}
+
+/* text animation */
+
+#welcome h1 {
+    display: block;
+    width: fit-content;
+    font-size: 2rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal 0.7s ease forwards;
+    animation-delay: 1s;
+}
+
+#welcome h1:nth-child(1) {
+    animation-delay: 0.7s;
+}
+
+#welcome h1:nth-child(2) {
+    animation-delay: 1.7s;
+}
+
+#welcome h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: crimson;
+    animation: text_reveal_box 0.7s ease;
+    animation-delay: 0.3s;
+}
+
+#welcome h1:nth-child(1) span {
+    animation-delay: 0.5s;
+}
+#welcome h1:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+
+@keyframes text_reveal_box {
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes text_reveal {
+    100% {
+        color: white;
+    }
+}
+/* done */
+#welcome .welcome {
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+
+.category {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.category span {
+    position: absolute;
+    right: -600px;
+    color: white;
+    -webkit-animation: slide-title 0.5s forwards;
+    -webkit-animation-delay: 3s;
+    animation: slide-title 0.5s forwards;
+    animation-delay: 2s;
+}
+.category button {
+    width: 200px;
+}
+
+.category .cocktail {
+    position: absolute;
+    right: -600px;
+    -webkit-animation: slide-top 0.5s forwards;
+    -webkit-animation-delay: 2.2s;
+    animation: slide-top 0.5s forwards;
+    animation-delay: 2.2s;
+}
+.category .whiskey {
+    position: absolute;
+    right: -600px;
+    -webkit-animation: slide-mid 0.5s forwards;
+    -webkit-animation-delay: 2.4s;
+    animation: slide-mid 0.5s forwards;
+    animation-delay: 2.4s;
+}
+.category .food {
+    position: absolute;
+    right: -600px;
+    -webkit-animation: slide-bot 0.5s forwards;
+    -webkit-animation-delay: 2.6s;
+    animation: slide-bot 0.5s forwards;
+    animation-delay: 2.6s;
+}
+
+@-webkit-keyframes slide-title {
+    100% {
+        right: 20%;
+        top: 0%;
+    }
+}
+
+@keyframes slide-title {
+    100% {
+        right: 20%;
+        top: 0%;
+    }
+}
+
+@-webkit-keyframes slide-top {
+    100% {
+        right: 25%;
+        top: 10%;
+    }
+}
+
+@keyframes slide-top {
+    100% {
+        right: 25%;
+        top: 10%;
+    }
+}
+
+@-webkit-keyframes slide-mid {
+    100% {
+        right: 25%;
+        top: 35%;
+    }
+}
+
+@keyframes slide-mid {
+    100% {
+        right: 25%;
+        top: 35%;
+    }
+}
+
+@-webkit-keyframes slide-bot {
+    100% {
+        right: 25%;
+        top: 60%;
+    }
+}
+
+@keyframes slide-bot {
+    100% {
+        right: 25%;
+        top: 60%;
+    }
+}
