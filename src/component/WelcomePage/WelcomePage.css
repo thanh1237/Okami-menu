@@ -42,7 +42,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    animation: flicker 1.5s infinite alternate;
+    animation: flicker 1s infinite alternate;
 }
 
 .board .operation {

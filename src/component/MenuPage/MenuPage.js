@@ -5,9 +5,9 @@ import { Carousel } from "react-responsive-carousel";
 
 const MenuPage = (props) => {
     const { category, handleChangeCarousel, navSelected } = props;
-    console.log("category", category);
+
     return (
-        <>
+        <div id="menu-page">
             <div className="menuNav">
                 <h4 onClick={() => handleChangeCarousel(1)} className={navSelected === 1 ? "selectedMenu" : "textMenu"}>
                     WHISKEY
@@ -37,7 +37,7 @@ const MenuPage = (props) => {
                     );
                 })}
             </Carousel>
-        </>
+        </div>
     );
 };
 

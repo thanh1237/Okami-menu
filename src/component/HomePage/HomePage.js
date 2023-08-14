@@ -100,10 +100,10 @@ function HomePage() {
     return (
         <>
             {/* <PublicNavbar handleChangeCarousel={handleChangeCarousel} /> */}
-            <>
+            <div id="home">
                 <WelcomePage />
                 <MenuPage category={category} handleChangeCarousel={handleChangeCarousel} navSelected={navSelected} />
-            </>
+            </div>
         </>
     );
 }

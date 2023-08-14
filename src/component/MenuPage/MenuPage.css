@@ -1,4 +1,7 @@
 .menuNav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
     background-color: black;
     color: white;
     width: 100%;
