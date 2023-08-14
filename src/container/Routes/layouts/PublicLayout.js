@@ -3,7 +3,6 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import AlertMsg from "shared/AlertMsg";
 import NotFoundPage from "shared/NotFoundPage";
-import PublicNavbar from "shared/PublicNavbar";
 
 const PublicLayout = () => {
     return (

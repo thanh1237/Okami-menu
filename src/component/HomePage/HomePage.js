@@ -1,9 +1,8 @@
-import React, { memo } from "react";
+import React from "react";
 import "./HomePage.css";
 import { useState } from "react";
-import Carousel from "react-bootstrap/Carousel";
-import PublicNavbar from "shared/PublicNavbar";
 import WelcomePage from "component/WelcomePage/WelcomePage";
+import MenuPage from "component/MenuPage/MenuPage";
 const cocktails = [
     {
         name: "1",
@@ -83,9 +82,12 @@ const food = [
     },
 ];
 function HomePage() {
-    const [category, setCategory] = useState(null);
+    const [category, setCategory] = useState(cocktails);
+    const [navSelected, setNavSelected] = useState(0);
 
     const handleChangeCarousel = (selectedIndex) => {
+        console.log(selectedIndex);
+        setNavSelected(selectedIndex);
         if (selectedIndex === 0) {
             setCategory(cocktails);
         } else if (selectedIndex === 1) {
@@ -97,28 +99,13 @@ function HomePage() {
 
     return (
         <>
-            {category ? (
-                <>
-                    <PublicNavbar handleChangeCarousel={handleChangeCarousel} />
-                    <Carousel className="carousel-container">
-                        {category.map((item, idx) => {
-                            return (
-                                <Carousel.Item key={idx} className="item-container">
-                                    <img src={`${item.imgUrl}`} alt={`cocktail-${idx}`} />
-                                    <Carousel.Caption>
-                                        <h3>{item.name}</h3>
-                                        <p>{item.desc}</p>
-                                    </Carousel.Caption>
-                                </Carousel.Item>
-                            );
-                        })}
-                    </Carousel>
-                </>
-            ) : (
-                <WelcomePage handleChangeCarousel={handleChangeCarousel} />
-            )}
+            {/* <PublicNavbar handleChangeCarousel={handleChangeCarousel} /> */}
+            <>
+                <WelcomePage />
+                <MenuPage category={category} handleChangeCarousel={handleChangeCarousel} navSelected={navSelected} />
+            </>
         </>
     );
 }
 
-export default memo(HomePage);
+export default HomePage;
