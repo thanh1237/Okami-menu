@@ -29,7 +29,7 @@ const WelcomePage = (props) => {
                             textAlign: "center",
                             width: "100%",
                             height: "1px",
-                            margin: "5px 0",
+                            margin: "10px 0",
                         }}
                     ></div>
                     <div className="hotline">

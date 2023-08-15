@@ -1,7 +1,7 @@
 import React from "react";
 import "./MenuPage.css";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
+import { Col, Row } from "react-bootstrap";
+import CardItem from "component/CardItem/CardItem";
 
 const MenuPage = (props) => {
     const { category, handleChangeCarousel, navSelected } = props;
@@ -25,18 +25,16 @@ const MenuPage = (props) => {
                     FOOD
                 </h4>
             </div>
-            <Carousel className="carousel-container">
+
+            <Row style={{ background: "black", maxWidth: "100%" }}>
                 {category?.map((item, idx) => {
                     return (
-                        <div key={idx} className="item-container">
-                            <img src={`${item.imgUrl}`} alt={`cocktail-${idx}`} />
-
-                            <h3>{item.name}</h3>
-                            <p>{item.desc}</p>
-                        </div>
+                        <Col xs={12} md={4} lg={3} key={idx} className="item-container">
+                            <CardItem item={item} />
+                        </Col>
                     );
                 })}
-            </Carousel>
+            </Row>
         </div>
     );
 };
