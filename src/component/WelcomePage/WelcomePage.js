@@ -4,17 +4,6 @@ const WelcomePage = (props) => {
     return (
         <section id="welcome">
             <div className="welcome">
-                {/* <img
-                    className="home"
-                    src="/home_xl.jpg"
-                    alt="home"
-                    style={{
-                        width: " 100%",
-                        height: "100%",
-                        background: "black",
-                        objectFit: "cover",
-                    }}
-                /> */}
                 <div className="board">
                     <div className="operation">
                         <h2>OKAMI</h2>
@@ -33,8 +22,8 @@ const WelcomePage = (props) => {
                         }}
                     ></div>
                     <div className="hotline">
-                        <h2>HOTLINE</h2>
-                        <p>0942246710</p>
+                        <p>HOTLINE</p>
+                        <h2>0942246710</h2>
                     </div>
                 </div>
             </div>

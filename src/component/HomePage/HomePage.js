@@ -27,12 +27,9 @@ function HomePage() {
     };
 
     useEffect(() => {
-        //Implementing the setInterval method
         const interval = setInterval(() => {
             setLoading(false);
-        }, 3000);
-        console.log(interval);
-        //Clearing the interval
+        }, 3500);
         return () => clearInterval(interval);
     }, [loading]);
 
