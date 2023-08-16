@@ -52,6 +52,17 @@ library.add(
     faSignInAlt
 );
 
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("menuNav").style.top = "0";
+  } else {
+    document.getElementById("menuNav").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
 function App() {
     return (
         <Router>

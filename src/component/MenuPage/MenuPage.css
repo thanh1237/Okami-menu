@@ -1,4 +1,4 @@
-.menuNav {
+#menuNav {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -14,9 +14,10 @@
     box-shadow: 0px 17px 20px 0px rgba(0, 0, 0, 0.77);
     z-index: 3;
     padding: 0 10px;
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
 
-.menuNav h4 {
+#menuNav h4 {
     font-size: 1.2rem;
 }
 

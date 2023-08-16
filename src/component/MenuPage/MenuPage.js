@@ -8,7 +8,7 @@ const MenuPage = (props) => {
 
     return (
         <div id="menu-page">
-            <div className="menuNav">
+            <div id="menuNav">
                 <h4 onClick={() => handleChangeCarousel(1)} className={navSelected === 1 ? "selectedMenu" : "textMenu"}>
                     WHISKEY
                 </h4>
@@ -26,7 +26,7 @@ const MenuPage = (props) => {
                 </h4>
             </div>
 
-            <Row style={{ background: "black", maxWidth: "100%" }}>
+            <Row style={{ background: "black"}}>
                 {category?.map((item, idx) => {
                     return (
                         <Col xs={12} md={4} lg={3} key={idx} className="item-container">

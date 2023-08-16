@@ -90,7 +90,6 @@ function HomePage() {
     const [navSelected, setNavSelected] = useState(0);
 
     const handleChangeCarousel = (selectedIndex) => {
-        console.log(selectedIndex);
         setNavSelected(selectedIndex);
         if (selectedIndex === 0) {
             setCategory(cocktails);
@@ -103,7 +102,6 @@ function HomePage() {
 
     return (
         <>
-            {/* <PublicNavbar handleChangeCarousel={handleChangeCarousel} /> */}
             <div id="home">
                 <WelcomePage />
                 <MenuPage category={category} handleChangeCarousel={handleChangeCarousel} navSelected={navSelected} />

@@ -4,7 +4,7 @@ const WelcomePage = (props) => {
     return (
         <section id="welcome">
             <div className="welcome">
-                <img
+                {/* <img
                     className="home"
                     src="/home_xl.jpg"
                     alt="home"
@@ -14,7 +14,7 @@ const WelcomePage = (props) => {
                         background: "black",
                         objectFit: "cover",
                     }}
-                />
+                /> */}
                 <div className="board">
                     <div className="operation">
                         <h2>OKAMI</h2>
