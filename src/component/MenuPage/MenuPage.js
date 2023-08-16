@@ -6,6 +6,16 @@ import CardItem from "component/CardItem/CardItem";
 const MenuPage = (props) => {
     const { category, handleChangeCarousel, navSelected } = props;
 
+    let prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+        let currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("menuNav").style.top = "0";
+        } else {
+            document.getElementById("menuNav").style.top = "-50px";
+        }
+        prevScrollpos = currentScrollPos;
+    };
     return (
         <div id="menu-page">
             <div id="menuNav">
@@ -26,7 +36,7 @@ const MenuPage = (props) => {
                 </h4>
             </div>
 
-            <Row style={{ background: "black"}}>
+            <Row style={{ background: "black" }}>
                 {category?.map((item, idx) => {
                     return (
                         <Col xs={12} md={4} lg={3} key={idx} className="item-container">
