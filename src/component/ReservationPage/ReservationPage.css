@@ -1,0 +1,40 @@
+#reservation {
+    width: 65%;
+    margin: 0 auto;
+}
+
+#reservation .info .title {
+    text-align: left;
+    font-size: 34px;
+    line-height: 1.41;
+    margin: 20px 0;
+}
+
+#reservation .divider {
+    margin: 5px 0;
+    width: 100%;
+    border: 0.1px solid black;
+}
+
+#reservation .info .info-body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#reservation .info .info-body p {
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+#reservation .info .info-body .hours-operation {
+    margin-top: 30px;
+    font-size: 24px;
+    line-height: 1.13;
+}
+
+#reservation .info .info-body .time {
+    padding-left: 40px;
+    font-size: 14px;
+}

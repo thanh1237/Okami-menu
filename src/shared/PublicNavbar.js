@@ -1,34 +1,33 @@
 import React from "react";
-import { Navbar, Nav } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Nav } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+const PublicNavbar = () => {
+    const navigate = useNavigate();
+    const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
 
-const PublicNavbar = (props) => {
-    const { handleChangeCarousel } = props;
+    const handleNavigate = (url) => {
+        navigate(url);
+    };
     return (
-        <Navbar
-            bg="dark"
-            expand="lg"
-            style={{
-                color: "white",
-            }}
-        >
-            <Navbar.Brand as={Link} to="/" className="mr-auto">
-                <h1
-                    style={{
-                        color: "white",
-                    }}
-                >
-                    Okami
-                </h1>
-            </Navbar.Brand>
-            {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
-            <div className="nav-container">
-                <h6 onClick={() => handleChangeCarousel(0)}>cocktail</h6>
-                <h6 onClick={() => handleChangeCarousel(1)}>whiskey</h6>
-                <h6 onClick={() => handleChangeCarousel(2)}>food</h6>
+        <Nav style={{ marginBottom: "50px" }} activeKey="1" onSelect={handleSelect}>
+            <div className="brand-logo">
+                <img src="/logo.png" alt="logo" />
             </div>
-        </Navbar>
+            <Nav.Item onClick={() => handleNavigate("/about")}>About</Nav.Item>
+            <Nav.Item onClick={() => handleNavigate("/cuisine")}>Cuisine</Nav.Item>
+            <div className="dropdown">
+                <Nav.Item className="dropbtn">MENUS</Nav.Item>
+                <div className="dropdown-content">
+                    <a href="#">Lunch Menu</a>
+                    <div className="border" />
+                    <a href="#">Diner Menu</a>
+                    <div className="border" />
+                    <a href="#">Wine list</a>
+                </div>
+            </div>
+            <Nav.Item onClick={() => handleNavigate("/reservation")}>Reservations</Nav.Item>
+            <Nav.Item onClick={() => handleNavigate("/private-dining")}>Private Dining</Nav.Item>
+        </Nav>
     );
 };
 

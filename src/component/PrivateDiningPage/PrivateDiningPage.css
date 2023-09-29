@@ -1,0 +1,26 @@
+#private {
+    width: 65%;
+    margin: 0 auto;
+}
+#private .title {
+    text-align: left;
+    font-size: 34px;
+    line-height: 1.41;
+    margin: 35px 0;
+}
+#private .information {
+    padding: 20px;
+    margin-top: 50px;
+    min-height: 200px;
+    width: 100%;
+    border: 1px solid black;
+    border-left: 3px solid black;
+}
+#private .information .information-title {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.13;
+}
+#private .information .sub-title {
+    margin-bottom: 15px;
+}

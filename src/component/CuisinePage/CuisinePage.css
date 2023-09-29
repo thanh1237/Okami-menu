@@ -1,0 +1,34 @@
+#cuisine {
+    width: 65%;
+    margin: 0 auto;
+}
+#cuisine .kouzina .title {
+    text-align: left;
+    font-size: 34px;
+    line-height: 1.41;
+    margin: 20px 0;
+}
+
+#cuisine .kouzina .info {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#cuisine .kouzina .info p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left;
+    margin: 20px 0;
+    width: 100%;
+}
+
+#cuisine .divider {
+    margin: 5px 0;
+    width: 100%;
+    border: 0.1px solid black;
+}
+#cuisine .catalog {
+    margin-top: 50px;
+    padding: 0 15px;
+}

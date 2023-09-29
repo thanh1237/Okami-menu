@@ -1,0 +1,104 @@
+#about {
+    width: 65%;
+    margin: 0 auto;
+}
+#about .divider {
+    margin: 5px 0;
+    width: 100%;
+    border: 0.1px solid black;
+}
+#about .philoxenia {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+#about .philoxenia .title {
+    text-align: left;
+    font-size: 34px;
+    line-height: 1.41;
+    margin: 20px 0;
+}
+#about .philoxenia .info {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#about .philoxenia .info p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left;
+    margin: 20px 0;
+    width: 100%;
+}
+
+#about .kokkari {
+    margin-top: 50px;
+}
+
+#about .kokkari .detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#about .kokkari .board {
+    width: 100%;
+    padding: 25px;
+    border: 1px solid black;
+    border-left: 2px solid black;
+    min-height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#about .kokkari .board .title {
+    font-size: 24px;
+    line-height: 1.13;
+    margin-bottom: 20px;
+}
+
+#about .kokkari .board .address {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+#about .kokkari .board .reservations {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bolder;
+    max-width: 200px;
+    word-wrap: break-word;
+}
+
+#about .kokkari .board .reservations span {
+    text-align: center;
+    font-weight: bolder;
+    color: #a37a3d;
+}
+
+#about .kokkari .board .directions {
+    text-align: center;
+    font-weight: bolder;
+    color: #a37a3d;
+}
+#about .kokkari .info {
+    width: 100%;
+}
+#about .kokkari .info .left {
+    text-align: right;
+}
+
+#about .kokkari .info .right {
+    text-align: left;
+    color: #a37a3d;
+}
+#about .kokkari .about {
+    max-width: 100%;
+    word-wrap: break-word;
+    flex-wrap: wrap;
+}
